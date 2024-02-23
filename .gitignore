@@ -1,0 +1,12 @@
+*.ipynb_checkpoints
+*/.ipynb_checkpoints
+dagster_home/
+postgresql/
+
+*venv
+*etl_pipeline.egg-info
+*spark-defaults.conf
+
+
+*pyproject.toml
+*setup.cfg

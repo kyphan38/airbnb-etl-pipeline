@@ -1,0 +1,21 @@
+NOTE:
+
+# Create info dimension to show information in Looker Studio
+CONCAT("Name: ", Name, "\n\n", "Host name: ", Host_name, "\n\n", "Price: $", CAST(Price AS STRING))
+
+# Create loc dimension to visualize map
+CONCAT(latitude, ",", longtitude)
+
+# Create schema and table for gold_layer in postgres
+CREATE SCHEMA gold;
+
+CREATE TABLE rental_info (
+	name VARCHAR(255),
+	host_name VARCHAR(255),
+	latitude DECIMAL(9, 20),
+	longitude DECIMAL(9, 20),
+	room_type VARCHAR(50),
+	price DECIMAL(9, 3),
+	city VARCHAR(30),
+	country VARCHAR(10)
+);
